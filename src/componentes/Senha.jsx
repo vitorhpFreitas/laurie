@@ -7,7 +7,7 @@ function Senha() {
   };
   const handleSenha = () => {
     if (valor === "1414") {
-      window.location.href = "/home";
+      window.location.href = "/casa";
     } else {
       alert("Senha incorreta");
     }
