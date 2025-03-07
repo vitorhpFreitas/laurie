@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Ojuju:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sigmar&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Teko:wght@300..700&display=swap");
+.Appp {
+  background: linear-gradient(160deg, #aa60c8 0%, #d69ade 50%, #eabde6 100%);
+  width: 100%;
+  height: 100%;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.botao {
+  display: flex;
+  justify-content: center;
+  transform: translateY(-40vh);
+  transition: 1s;
+}
+.truebotao {
+  transform: translateY(0);
+  transition: 1s;
+}
+/* From Uiverse.io by barisdogansutcu */
+label {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 15px 10px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  color: black;
+}
+
+input {
+  display: none;
+}
+
+input:checked + label svg {
+  fill: hsl(0deg 100% 50%);
+  stroke: hsl(0deg 100% 50%);
+  animation: heartButton 1s;
+}
+
+@keyframes heartButton {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.3);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+input + label .action {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+}
+
+input + label .action span {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  transition: all 0.5s;
+}
+
+input + label .action span.option-1 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+
+input:checked + label .action span.option-1 {
+  transform: translate(0px, -100%);
+  opacity: 0;
+}
+
+input + label .action span.option-2 {
+  transform: translate(0px, 100%);
+  opacity: 0;
+}
+
+input:checked + label .action span.option-2 {
+  transform: translate(0px, 0%);
+  opacity: 1;
+}
+/* From Uiverse.io by janisar-hyder */
+
+.header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+.trueheader {
+  transform: translate(0, 0);
+  transition: 1s;
+}
+
+.stack {
+  margin-left: 2em;
+  width: 80%;
+  max-width: 400px;
+  transition: 0.25s ease;
+  &:hover {
+    transform: rotate(5deg);
+    .card:before {
+      transform: translatey(-2%) rotate(-4deg);
+    }
+    .card:after {
+      transform: translatey(2%) rotate(4deg);
+    }
+  }
+}
+
+.card {
+  aspect-ratio: 3 / 2;
+  border: 4px solid;
+  background-color: #fff;
+  position: relative;
+  transition: 0.15s ease;
+  cursor: pointer;
+  padding: 5% 5% 15% 5%;
+  &:before,
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border: 4px solid;
+    background-color: #fff;
+    transform-origin: center center;
+    z-index: -1;
+    transition: 0.15s ease;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    transform: translatey(-2%) rotate(-6deg);
+  }
+
+  &:after {
+    transform: translatey(2%) rotate(6deg);
+  }
+}
+
+.image {
+  width: 100%;
+  border: 4px solid;
+  background-color: #eee;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow-y: hidden;
+}
+.image img {
+  object-fit: cover;
+  width: 100%;
+  height: 280px;
+}
+
+.browser-warning {
+  margin-bottom: 4rem;
+}
+
+@supports (aspect-ratio: 1 / 1) {
+  .browser-warning {
+    display: none;
+  }
+}
+.datas {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  width: 95%;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.datas p {
+  color: #be5985;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 800;
+}
+.datas span {
+  color: #be5985;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #eabde6;
+  margin: 0.5em;
+  padding: 1.5em;
+  border-radius: 2em;
+}
+.segundoss {
+  grid-column: 3;
+  grid-row: 2;
+}
+.segundos {
+  grid-column: 2;
+  grid-row: 2;
+}
+.horas {
+  grid-column: 1;
+  grid-row: 2;
+}
+.dias {
+  grid-column: 3;
+  grid-row: 1;
+}
+.meses {
+  grid-column: 2;
+  grid-row: 1;
+}
+.anos {
+  grid-column: 1;
+  grid-row: 1;
+}
+.truedias {
+  display: none;
+}
+.euteamo {
+  color: #be5985;
+  font-family: "Epilogue", sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+}
+footer {
+  width: 90%;
+  border-top: 3px solid #88003b;
+  height: 120%;
+  margin-bottom: -1em;
+  padding: 2em 1em;
+}
+footer p {
+  color: #be5985;
+  font-family: "Epilogue", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+}
+.falsefooter {
+  display: none;
+}
+.senha {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* From Uiverse.io by shadowmurphy */
+.container1 {
+  width: 300px;
+  height: 320px;
+  background-color: #343541;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 40px;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar a {
+  color: #6b6c7b;
+  white-space: nowrap;
+  margin-left: 10px;
+  user-select: none;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.line {
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  background-color: #6b6c7b;
+  border-radius: 30px;
+}
+
+.line.one {
+  transform: rotate(45deg);
+}
+
+.line.two {
+  transform: rotate(135deg);
+}
+
+.messages-area {
+  background-color: green;
+  width: 100%;
+  height: 210px;
+}
+
+.sender-area {
+  background-color: #343541;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  border-radius: 8px;
+}
+
+.message {
+  width: 100%;
+  height: 40px;
+}
+
+.message.one,
+.message.three,
+.message.five {
+  background-color: #2e2f3a;
+}
+
+.message.two,
+.message.four,
+.message.six {
+  background-color: #343541;
+}
+
+.send-img {
+  width: 30px;
+}
+
+.send-input {
+  outline: none;
+  display: flex;
+  border: none;
+  background: none;
+  height: 40px;
+  width: 230px;
+  border-radius: 7px;
+  background: none;
+  color: white;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-left: 5px;
+}
+
+.send-input::placeholder {
+  color: #828e9e;
+}
+
+.input-place {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  margin-left: 10px;
+  align-items: center;
+  background-color: #40414f;
+  border-radius: 7px;
+  height: 40px;
+  width: 280px;
+  gap: 5px;
+  border: 1px solid #2e2f3a;
+}
+
+.send {
+  width: 30px;
+  height: 30px;
+  background-color: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.send-icon {
+  width: 17px;
+}
+.message {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+/* From Uiverse.io by catraco */
+.btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  width: 60px;
+  height: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: 10px solid rgb(var(--primary), 0.5);
+  border-radius: 100%;
+  position: relative;
+  transition: 0.3s;
+}
+
+.btn-class-name .back {
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-class-name .front {
+  background: linear-gradient(
+    0deg,
+    rgba(var(--primary), 0.6) 20%,
+    rgba(var(--primary)) 50%
+  );
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+  border-radius: 100%;
+  position: absolute;
+  border: 1px solid rgb(var(--secondary));
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: inherit;
+  transform: translateY(-15%);
+  transition: 0.15s;
+  color: rgb(var(--secondary));
+}
+
+.btn-class-name:active .front {
+  transform: translateY(0%);
+  box-shadow: 0 0;
+}
+.nav-bar {
+  text-decoration: none;
+}
