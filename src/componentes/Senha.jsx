@@ -5,14 +5,15 @@ function Senha() {
   const handleInput = (event) => {
     setValor(event.target.value);
   };
+
   const handleSenha = () => {
     if (valor === "1414") {
-      window.location.href = "/casa";
+      window.location.href = "https://laurie-tau.vercel.app";
     } else {
       alert("Senha incorreta");
     }
   };
-  console.log(valor);
+  console.log(handleSenha);
   return (
     <div className="senha">
       <div className="container1">
